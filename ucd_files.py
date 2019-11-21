@@ -23,7 +23,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'Blocks.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'CJKRadicals.txt': {

@@ -7,7 +7,7 @@ UCD data files
 ----------------
 ucd-json downloads it's data from online during usage. If first run or other version requested, network connection should needed.
 
-Files will downloaded under directory `data/{version}/`, data/emoji/{version}/` which version is Unicode/Emoji version.
+Files will downloaded under directory `data/{version}/`, `data/emoji/{version}/` which version is Unicode/Emoji version.
 
 Usage
 ---------------
