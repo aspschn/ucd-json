@@ -131,7 +131,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'Scripts.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'SpecialCasing.txt': {
