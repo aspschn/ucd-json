@@ -39,7 +39,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'DerivedAge.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'DerivedCoreProperties.txt': {
@@ -51,7 +51,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'EastAsianWidth.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'EmojiSources.txt': {
@@ -63,7 +63,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'HangulSyllableType.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'Index.txt': {
@@ -71,7 +71,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'IndicPositionalCategory.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'IndicSyllabicCategory.txt': {
