@@ -27,6 +27,87 @@ You can also redirect the output to write result as file.
 $ ./ucd-json PropertyValueAliases.txt > PropertyValueAliases.json
 ```
 
+Coverage
+---------
+
+### UCD files
+
+| File                           | Status          | Parser            |
+| ------------------------------ | --------------- | ----------------- |
+| ArabicShaping.txt              | Not implemented |                   |
+| BidiBrackets.txt               | Not implemented |                   |
+| BidiCharacterTest.txt          | Not implemented |                   |
+| BidiMirroring.txt              | Not implemented |                   |
+| BidiTest.txt                   | Not implemented |                   |
+| Blocks.txt                     | Done            | RangeValueParser  |
+| CaseFolding.txt                | Not implemented |                   |
+| CJKRadicals.txt                | Not implemented |                   |
+| CompositionExclusions.txt      | Not implemented |                   |
+| DerivedAge.txt                 | Done            | RangeValueParser  |
+| DerivedCoreProperties.txt      | Not implemented |                   |
+| DerivedNormalizationProps.txt  | Not implemented |                   |
+| EastAsianWidth.txt             | Done            | RangeValueParser  |
+| EmojiSources.txt               | Not implemented |                   |
+| EquivalentUnifiedIdeograph.txt | Not implemented |                   |
+| HangulSyllableType.txt         | Done            | RangeValueParser  |
+| Index.txt                      | Not implemented |                   |
+| IndicPositionalCategory.txt    | Done            | RangeValueParser  |
+| IndicSyllabicCategory.txt      | Not implemented |                   |
+| Jamo.txt                       | Not implemented |                   |
+| LineBreak.txt                  | Not implemented |                   |
+| NameAliases.txt                | Not implemented |                   |
+| NamedSequencesProv.txt         | Not implemented |                   |
+| NamedSequences.txt             | Not implemented |                   |
+| NamesList.txt                  | Not implemented |                   |
+| NormalizationCorrections.txt   | Not implemented |                   |
+| NormalizationTest.txt          | Not implemented |                   |
+| NushuSources.txt               | Not implemented |                   |
+| PropertyAliases.txt            | Done            | SimpleKeyValueParser |
+| PropertyValueAliases.txt       | Done            | GroupedSimpleKeyValueParser |
+| PropList.txt                   | Not implemented |                   |
+| ScriptExtensions.txt           | Not implemented |                   |
+| Scripts.txt                    | Done            | RangeValueParser  |
+| SpecialCasing.txt              | Not implemented |                   |
+| StandardizedVariants.txt       | Not implemented |                   |
+| TangutSources.txt              | Not implemented |                   |
+| UnicodeData.txt                | Not implemented |                   |
+| USourceData.txt                | Not implemented |                   |
+| VerticalOrientation.txt        | Not implemented |                   |
+
+| File                                | Status          | Parser            |
+| ----------------------------------- | --------------- | ----------------- |
+| auxiliary/GraphemeBreakProperty.txt | Not implemented |                   |
+| auxiliary/GraphemeBreakTest.txt     | Not implemented |                   |
+| auxiliary/LineBreakTest.txt         | Not implemented |                   |
+| auxiliary/SentenceBreakProperty.txt | Not implemented |                   |
+| auxiliary/SentenceBreakTest.txt     | Not implemented |                   |
+| auxiliary/WordBreakProperty.txt     | Not implemented |                   |
+| auxiliary/WordBreakTest.txt         | Not implemented |                   |
+| extracted/DerivedBidiClass.txt         | Not implemented |                   |
+| extracted/DerivedBinaryProperties.txt  | Not implemented |                   |
+| extracted/DerivedCombiningClass.txt    | Not implemented |                   |
+| extracted/DerivedDecompositionType.txt | Not implemented |                   |
+| extracted/DerivedEastAsianWidth.txt    | Not implemented |                   |
+| extracted/DerivedGeneralCategory.txt   | Not implemented |                   |
+| extracted/DerivedJoiningGroup.txt      | Not implemented |                   |
+| extracted/DerivedJoiningType.txt       | Not implemented |                   |
+| extracted/DerivedLineBreak.txt         | Not implemented |                   |
+| extracted/DerivedName.txt              | Not implemented |                   |
+| extracted/DerivedNumericType.txt       | Not implemented |                   |
+| extracted/DerivedNumericValues.txt     | Not implemented |                   |
+
+### Emoji files
+
+| File                           | Status          | Parser            |
+| ------------------------------ | --------------- | ----------------- |
+| emoji-data.txt                 | Not implemented |                   |
+| emoji-sequences.txt            | Not implemented |                   |
+| emoji-test.txt                 | Not implemented |                   |
+| emoji-variation-sequences.txt  | Not implemented |                   |
+| emoji-zwj-sequences.txt        | Not implemented |                   |
+
+
+
 License
 ---------
 ucd-json is available under the MIT license. For details, see the LICENSE file.
