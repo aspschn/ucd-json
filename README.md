@@ -64,7 +64,7 @@ Coverage
 | NushuSources.txt               | Not implemented |                   |
 | PropertyAliases.txt            | Done            | SimpleKeyValueParser |
 | PropertyValueAliases.txt       | Done            | GroupedSimpleKeyValueParser |
-| PropList.txt                   | Not implemented |                   |
+| PropList.txt                   | Done            | RangeValueParser  |
 | ScriptExtensions.txt           | Not implemented |                   |
 | Scripts.txt                    | Done            | RangeValueParser  |
 | SpecialCasing.txt              | Not implemented |                   |
@@ -88,7 +88,7 @@ Coverage
 | extracted/DerivedCombiningClass.txt    | Not implemented |                   |
 | extracted/DerivedDecompositionType.txt | Not implemented |                   |
 | extracted/DerivedEastAsianWidth.txt    | Not implemented |                   |
-| extracted/DerivedGeneralCategory.txt   | Not implemented |                   |
+| extracted/DerivedGeneralCategory.txt   | Done            | RangeValueParser  |
 | extracted/DerivedJoiningGroup.txt      | Not implemented |                   |
 | extracted/DerivedJoiningType.txt       | Not implemented |                   |
 | extracted/DerivedLineBreak.txt         | Not implemented |                   |

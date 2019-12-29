@@ -115,7 +115,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'PropList.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'PropertyAliases.txt': {
@@ -155,7 +155,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'VerticalOrientation.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
 
@@ -209,7 +209,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'extracted/DerivedGeneralCategory.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'extracted/DerivedJoiningGroup.txt': {
@@ -237,7 +237,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'emoji-data.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'emoji',
     },
     'emoji-sequences.txt': {
