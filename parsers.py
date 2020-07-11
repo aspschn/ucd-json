@@ -84,7 +84,6 @@ class RangeValueParser(BaseParser):
                 continue
             strings = tuple(map(lambda x: x.strip(), line.split(';')))
             k = strings[0]
-            k = k.replace('..', '-')
             v = strings[1]
             d[k] = v
         return d
