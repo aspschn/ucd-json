@@ -64,7 +64,7 @@ Coverage
 | NushuSources.txt               | Not implemented |                   |
 | PropertyAliases.txt            | Done            | SimpleKeyValueParser |
 | PropertyValueAliases.txt       | Done            | GroupedSimpleKeyValueParser |
-| PropList.txt                   | Done            | RangeValueParser  |
+| PropList.txt                   | Done            | GroupedRangeParser |
 | ScriptExtensions.txt           | Not implemented |                   |
 | Scripts.txt                    | Done            | RangeValueParser  |
 | SpecialCasing.txt              | Not implemented |                   |
