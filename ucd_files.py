@@ -115,7 +115,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'PropList.txt': {
-        'parser': parsers.RangeValueParser,
+        'parser': parsers.GroupedRangeParser,
         'type': 'ucd',
     },
     'PropertyAliases.txt': {
