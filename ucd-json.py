@@ -16,8 +16,8 @@ import json
 import parsers
 from ucd_files import ucd_files
 
-UNICODE_VERSION = '12.1.0'
-EMOJI_VERSION = '12.1'
+UNICODE_VERSION = '13.0.0'
+EMOJI_VERSION = '13.0'
 
 UCD_URL = "http://www.unicode.org/Public/{}/ucd/"
 EMOJI_URL = "http://www.unicode.org/Public/emoji/{}/"
