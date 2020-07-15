@@ -92,7 +92,7 @@ Coverage
 | extracted/DerivedJoiningGroup.txt      | Not implemented |                   |
 | extracted/DerivedJoiningType.txt       | Not implemented |                   |
 | extracted/DerivedLineBreak.txt         | Not implemented |                   |
-| extracted/DerivedName.txt              | Not implemented |                   |
+| extracted/DerivedName.txt              | Done            | RangeValueParser  |
 | extracted/DerivedNumericType.txt       | Not implemented |                   |
 | extracted/DerivedNumericValues.txt     | Not implemented |                   |
 

@@ -225,7 +225,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'extracted/DerivedName.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'extracted/DerivedNumericType.txt': {
