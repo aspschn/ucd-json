@@ -160,7 +160,7 @@ ucd_files = {
     },
 
     'auxiliary/GraphemeBreakProperty.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'auxiliary/GraphemeBreakTest.txt': {
@@ -236,9 +236,9 @@ ucd_files = {
         'parser': None,
         'type': 'ucd',
     },
-    'emoji-data.txt': {
-        'parser': parsers.RangeValueParser,
-        'type': 'emoji',
+    'emoji/emoji-data.txt': {
+        'parser': parsers.GroupedRangeParser,
+        'type': 'ucd',
     },
     'emoji-sequences.txt': {
         'parser': None,
@@ -248,9 +248,9 @@ ucd_files = {
         'parser': None,
         'type': 'emoji',
     },
-    'emoji-variation-sequences.txt': {
+    'emoji/emoji-variation-sequences.txt': {
         'parser': None,
-        'type': 'emoji',
+        'type': 'ucd',
     },
     'emoji-zwj-sequences.txt': {
         'parser': None,

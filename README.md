@@ -76,7 +76,7 @@ Coverage
 
 | File                                | Status          | Parser            |
 | ----------------------------------- | --------------- | ----------------- |
-| auxiliary/GraphemeBreakProperty.txt | Not implemented |                   |
+| auxiliary/GraphemeBreakProperty.txt | Done            | RangeValueParser  |
 | auxiliary/GraphemeBreakTest.txt     | Not implemented |                   |
 | auxiliary/LineBreakTest.txt         | Not implemented |                   |
 | auxiliary/SentenceBreakProperty.txt | Not implemented |                   |
@@ -98,13 +98,13 @@ Coverage
 
 ### Emoji files
 
-| File                           | Status          | Parser            |
-| ------------------------------ | --------------- | ----------------- |
-| emoji-data.txt                 | Not implemented |                   |
-| emoji-sequences.txt            | Not implemented |                   |
-| emoji-test.txt                 | Not implemented |                   |
-| emoji-variation-sequences.txt  | Not implemented |                   |
-| emoji-zwj-sequences.txt        | Not implemented |                   |
+| File                                   | Status          | Parser            |
+| -------------------------------------- | --------------- | ----------------- |
+| emoji/emoji-data.txt                   | Not implemented | GroupedRangeParser |
+| emoji/emoji-variation-sequences.txt    | Not implemented |                   |
+| emoji-sequences.txt                    | Not implemented |                   |
+| emoji-test.txt                         | Not implemented |                   |
+| emoji-zwj-sequences.txt                | Not implemented |                   |
 
 
 
