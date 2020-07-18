@@ -189,7 +189,7 @@ ucd_files = {
     },
 
     'extracted/DerivedBidiClass.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'extracted/DerivedBinaryProperties.txt': {
