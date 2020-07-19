@@ -85,7 +85,7 @@ Coverage
 | auxiliary/WordBreakTest.txt         | Not implemented |                   |
 | extracted/DerivedBidiClass.txt         | Not implemented |                   |
 | extracted/DerivedBinaryProperties.txt  | Not implemented |                   |
-| extracted/DerivedCombiningClass.txt    | Not implemented |                   |
+| extracted/DerivedCombiningClass.txt    | Done            | RangeValueParser  |
 | extracted/DerivedDecompositionType.txt | Not implemented |                   |
 | extracted/DerivedEastAsianWidth.txt    | Not implemented |                   |
 | extracted/DerivedGeneralCategory.txt   | Done            | RangeValueParser  |

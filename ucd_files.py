@@ -197,7 +197,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'extracted/DerivedCombiningClass.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'extracted/DerivedDecompositionType.txt': {
