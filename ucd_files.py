@@ -151,7 +151,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'UnicodeData.txt': {
-        'parser': None,
+        'parser': parsers.UnicodeDataParser,
         'type': 'ucd',
     },
     'VerticalOrientation.txt': {

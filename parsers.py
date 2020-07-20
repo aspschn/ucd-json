@@ -110,3 +110,31 @@ class RangeValueParser(BaseParser):
             v = strings[1]
             d[k] = v
         return d
+
+
+class UnicodeDataParser(BaseParser):
+    def __init__(self):
+        super().__init__()
+
+        self._parse_function = self.parse_function
+
+    @staticmethod
+    def parse_function(data):
+        '''Only for UnicodeData.txt'''
+        d = {}
+        lines = data.split('\n')
+        for line in lines:
+            line = BaseParser._remove_comment(line)
+            if line.strip() == '':
+                continue
+            strings = tuple(map(lambda x: x.strip(), line.split(';')))
+            props = {
+                'na': strings[1],
+                'gc': strings[2],
+                'ccc': strings[3],
+                'bc': strings[4],
+                'dm': strings[5], # Also contains dt.
+            }
+            d[strings[0]] = props
+        return d
+
