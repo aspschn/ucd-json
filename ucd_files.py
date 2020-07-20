@@ -201,7 +201,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'extracted/DerivedDecompositionType.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'extracted/DerivedEastAsianWidth.txt': {
