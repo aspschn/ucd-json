@@ -47,7 +47,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'DerivedNormalizationProps.txt': {
-        'parser': None,
+        'parser': parsers.NormalizationPropsParser,
         'type': 'ucd',
     },
     'EastAsianWidth.txt': {

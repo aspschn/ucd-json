@@ -45,7 +45,7 @@ Coverage
 | CompositionExclusions.txt      | Not implemented |                   |
 | DerivedAge.txt                 | Done            | RangeValueParser  |
 | DerivedCoreProperties.txt      | Not implemented |                   |
-| DerivedNormalizationProps.txt  | Not implemented |                   |
+| DerivedNormalizationProps.txt  | Done            | NormalizationPropsParser |
 | EastAsianWidth.txt             | Done            | RangeValueParser  |
 | EmojiSources.txt               | Not implemented |                   |
 | EquivalentUnifiedIdeograph.txt | Not implemented |                   |

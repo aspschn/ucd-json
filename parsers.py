@@ -138,3 +138,62 @@ class UnicodeDataParser(BaseParser):
             d[strings[0]] = props
         return d
 
+
+class NormalizationPropsParser(BaseParser):
+    def __init__(self):
+        super().__init__()
+
+        self._parse_function = self.parse_function
+
+    @staticmethod
+    def parse_function(data):
+        d = {
+            'Full_Composition_Exclusion': [],
+            'NFD_QC': {},
+            'NFKD_QC': {},
+            'NFKC_QC': {},
+            'NFKC_CF': {},
+            'Changes_When_NFKC_Casefolded': [],
+        }
+        lines = data.split('\n')
+        for line in lines:
+            line = BaseParser._remove_comment(line)
+            if line.strip() == '':
+                continue
+            strings = tuple(map(lambda x: x.strip(), line.split(';')))
+            # FC_NFKC is deprecated.
+            if strings[1] == 'FC_NFKC':
+                continue
+            # Full_Composition_Exclusion.
+            if strings[1] == 'Full_Composition_Exclusion':
+                d[strings[1]].append(strings[0])
+            # NFD_QC.
+            if strings[1] == 'NFD_QC':
+                d[strings[1]][strings[0]] = strings[2]
+            # NFKD_QC.
+            if strings[1] == 'NFKD_QC':
+                d[strings[1]][strings[0]] = strings[2]
+            # NFKC_QC.
+            if strings[1] == 'NFKC_QC':
+                d[strings[1]][strings[0]] = strings[2]
+            # Expands_On_NFD is deprecated.
+            if strings[1] == 'Expands_On_NFD':
+                continue
+            # Expands_On_NFC is deprecated.
+            if strings[1] == 'Expands_On_NFC':
+                continue
+            # Expands_On_NFKD is deprecated.
+            if strings[1] == 'Expands_On_NFKD':
+                continue
+            # Expands_On_NFKC is deprecated.
+            if strings[1] == 'Expands_On_NFKC':
+                continue
+            # NFKC_Casefold (NFKC_CF).
+            if strings[1] == 'NFKC_CF':
+                d[strings[1]][strings[0]] = strings[2]
+            # Changes_When_NFKC_Casefolded (CWKCF).
+            if strings[1] == 'Changes_When_NFKC_Casefolded':
+                d[strings[1]].append(strings[0])
+
+        return d
+
