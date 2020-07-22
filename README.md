@@ -60,7 +60,7 @@ Coverage
 | NamedSequences.txt             | Not implemented |                   |
 | NamesList.txt                  | Not implemented |                   |
 | NormalizationCorrections.txt   | Not implemented |                   |
-| NormalizationTest.txt          | Not implemented |                   |
+| NormalizationTest.txt          | Done            | NormalizationTestParser |
 | NushuSources.txt               | Not implemented |                   |
 | PropertyAliases.txt            | Done            | SimpleKeyValueParser |
 | PropertyValueAliases.txt       | Done            | GroupedSimpleKeyValueParser |

@@ -107,7 +107,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'NormalizationTest.txt': {
-        'parser': None,
+        'parser': parsers.NormalizationTestParser,
         'type': 'ucd',
     },
     'NushuSources.txt': {

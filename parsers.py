@@ -217,3 +217,32 @@ class NormalizationPropsParser(BaseParser):
 
         return d
 
+
+class NormalizationTestParser(BaseParser):
+    def __init__(self):
+        super().__init__()
+
+        self._parse_function = self.parse_function
+
+    @staticmethod
+    def parse_function(data):
+        d = {}
+        lines = data.split('\n')
+        for line in lines:
+            line = BaseParser._remove_comment(line)
+            if line.strip() == '':
+                continue
+            if line.startswith('@'):
+                continue
+            strings = tuple(map(lambda x: x.strip(), line.split(';')))
+            print(strings)
+            source = strings[0]
+            d[source] = {
+                'NFC': '{}'.format(strings[1]),
+                'NFD': '{}'.format(strings[2]),
+                'NFKC': '{}'.format(strings[3]),
+                'NFKD': '{}'.format(strings[4]),
+            }
+
+        return d
+
