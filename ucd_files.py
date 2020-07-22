@@ -35,7 +35,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'CompositionExclusions.txt': {
-        'parser': None,
+        'parser': parsers.RangeParser,
         'type': 'ucd',
     },
     'DerivedAge.txt': {

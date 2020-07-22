@@ -90,6 +90,26 @@ class GroupedRangeParser(BaseParser):
         return d
 
 
+class RangeParser(BaseParser):
+    def __init__(self):
+        super().__init__()
+
+        self._parse_function = self.parse_function
+
+    @staticmethod
+    def parse_function(data):
+        '''e.g. CompositionExclusions.txt'''
+        d = []
+        lines = data.split('\n')
+        for line in lines:
+            line = BaseParser._remove_comment(line)
+            if line.strip() == '':
+                continue
+            rng = line
+            d.append(rng)
+        return d
+
+
 class RangeValueParser(BaseParser):
     def __init__(self):
         super().__init__()

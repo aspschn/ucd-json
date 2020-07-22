@@ -42,7 +42,7 @@ Coverage
 | Blocks.txt                     | Done            | RangeValueParser  |
 | CaseFolding.txt                | Not implemented |                   |
 | CJKRadicals.txt                | Not implemented |                   |
-| CompositionExclusions.txt      | Not implemented |                   |
+| CompositionExclusions.txt      | Done            | RangeParser       |
 | DerivedAge.txt                 | Done            | RangeValueParser  |
 | DerivedCoreProperties.txt      | Not implemented |                   |
 | DerivedNormalizationProps.txt  | Done            | NormalizationPropsParser |
