@@ -235,7 +235,6 @@ class NormalizationTestParser(BaseParser):
             if line.startswith('@'):
                 continue
             strings = tuple(map(lambda x: x.strip(), line.split(';')))
-            print(strings)
             source = strings[0]
             d[source] = {
                 'NFC': '{}'.format(strings[1]),
