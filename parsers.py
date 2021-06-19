@@ -245,3 +245,26 @@ class NormalizationTestParser(BaseParser):
 
         return d
 
+class GraphemeBreakTestParser(BaseParser):
+    def __init__(self):
+        super().__init__()
+
+        self._parse_function = self.parse_function
+
+    @staticmethod
+    def parse_function(data):
+        d = {}
+        lines = data.split('\n')
+        for line in lines:
+            line = BaseParser._remove_comment(line)
+            if line.strip() == '':
+                continue
+            # Remove left and right ÷ mark.
+            string = line.lstrip('÷ ').rstrip(' ÷')
+            
+            source = string.replace(' ÷', '').replace(' ×', '')
+            split = string.split(' ÷ ')
+            breaks = list(map(lambda x: x.replace(' × ', ' '), split))
+            d[source] = breaks
+
+        return d

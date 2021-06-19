@@ -164,7 +164,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'auxiliary/GraphemeBreakTest.txt': {
-        'parser': None,
+        'parser': parsers.GraphemeBreakTestParser,
         'type': 'ucd',
     },
     'auxiliary/LineBreakTest.txt': {

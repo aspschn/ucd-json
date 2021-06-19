@@ -77,7 +77,7 @@ Coverage
 | File                                | Status          | Parser            |
 | ----------------------------------- | --------------- | ----------------- |
 | auxiliary/GraphemeBreakProperty.txt | Done            | RangeValueParser  |
-| auxiliary/GraphemeBreakTest.txt     | Not implemented |                   |
+| auxiliary/GraphemeBreakTest.txt     | Done            | GraphemeBreakTestParser |
 | auxiliary/LineBreakTest.txt         | Not implemented |                   |
 | auxiliary/SentenceBreakProperty.txt | Not implemented |                   |
 | auxiliary/SentenceBreakTest.txt     | Not implemented |                   |
