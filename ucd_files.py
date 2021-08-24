@@ -180,7 +180,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'auxiliary/WordBreakProperty.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'auxiliary/WordBreakTest.txt': {
