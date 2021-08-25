@@ -81,7 +81,7 @@ Coverage
 | auxiliary/LineBreakTest.txt         | Not implemented |                   |
 | auxiliary/SentenceBreakProperty.txt | Not implemented |                   |
 | auxiliary/SentenceBreakTest.txt     | Not implemented |                   |
-| auxiliary/WordBreakProperty.txt     | Not implemented |                   |
+| auxiliary/WordBreakProperty.txt     | Done            | RangeValueParser  |
 | auxiliary/WordBreakTest.txt         | Not implemented |                   |
 | extracted/DerivedBidiClass.txt         | Not implemented |                   |
 | extracted/DerivedBinaryProperties.txt  | Not implemented |                   |
