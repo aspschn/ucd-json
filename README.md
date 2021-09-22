@@ -100,7 +100,7 @@ Coverage
 
 | File                                   | Status          | Parser            |
 | -------------------------------------- | --------------- | ----------------- |
-| emoji/emoji-data.txt                   | Not implemented | GroupedRangeParser |
+| emoji/emoji-data.txt                   | Done            | GroupedRangeParser |
 | emoji/emoji-variation-sequences.txt    | Not implemented |                   |
 | emoji-sequences.txt                    | Not implemented |                   |
 | emoji-test.txt                         | Not implemented |                   |
