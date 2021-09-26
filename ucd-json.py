@@ -4,7 +4,7 @@ ucd-json.py
 
 Author:     Yujeonja <hardboiled65@gmail.com>
 Created:    2019. 11. 02. 15:30
-Copyright (c) 2019 Yujeonja. All rights reserved.
+Copyright (c) 2019-2021 Yujeonja. All rights reserved.
 '''
 import os
 import shutil
@@ -28,24 +28,33 @@ EMOJI_DATA_BASEDIR = 'data/emoji/'
 
 def has_data(version):
     '''Check if UCD data has been downloaded.'''
-    data_path = os.path.join(UCD_DATA_BASEDIR, version, 'UCD.zip')
+    base_dir = os.path.dirname(os.path.realpath(__file__))
+    data_dir = os.path.join(base_dir, UCD_DATA_BASEDIR)
+    data_path = os.path.join(data_dir, version, 'UCD.zip')
     return os.path.isfile(data_path)
 
 def has_emoji_data(version):
     '''Check if Emoji data has been downloaded.'''
-    data_path = os.path.join(EMOJI_DATA_BASEDIR, version, 'emoji-data.txt')
+    base_dir = os.path.dirname(os.path.realpath(__file__))
+    data_dir = os.path.join(base_dir, EMOJI_DATA_BASEDIR)
+    data_path = os.path.join(data_dir, version, 'emoji-data.txt')
     return os.path.isfile(data_path)
 
 def download_data(unicode_version, emoji_version):
+    # Get the data dirs.
+    base_dir = os.path.dirname(os.path.realpath(__file__))
+    ucd_data_base_dir = os.path.join(base_dir, UCD_DATA_BASEDIR)
+    emoji_data_base_dir = os.path.join(base_dir, EMOJI_DATA_BASEDIR)
+
     # Download UCD data.
-    os.system('mkdir -p ' + os.path.join(UCD_DATA_BASEDIR, unicode_version))
+    os.system('mkdir -p ' + os.path.join(ucd_data_base_dir, unicode_version))
     cmd = 'wget https://www.unicode.org/Public/{}/ucd/UCD.zip'.format(
         unicode_version)
-    cmd += ' -O ' + os.path.join(UCD_DATA_BASEDIR, unicode_version, 'UCD.zip')
+    cmd += ' -O ' + os.path.join(ucd_data_base_dir, unicode_version, 'UCD.zip')
     os.system(cmd)
 
     # Download emoji data.
-    emoji_dir = os.path.join(EMOJI_DATA_BASEDIR, emoji_version)
+    emoji_dir = os.path.join(emoji_data_base_dir, emoji_version)
     os.system('mkdir -p ' + emoji_dir)
 
     url = EMOJI_URL.format(emoji_version) + 'emoji-data.txt'
@@ -69,18 +78,22 @@ def download_data(unicode_version, emoji_version):
     os.system(cmd)
 
 def unzip_data(unicode_version, emoji_version):
+    base_dir = os.path.dirname(os.path.realpath(__file__))
     # Unzip UCD.
-    ucd_zip_path = os.path.join(UCD_DATA_BASEDIR, unicode_version,
+    ucd_zip_path = os.path.join(base_dir, UCD_DATA_BASEDIR, unicode_version,
         'UCD.zip')
     ucd_zip = zipfile.ZipFile(ucd_zip_path)
     ucd_zip.extractall(path=os.path.dirname(ucd_zip_path))
 
 def read_data(data_type, file_name, unicode_version, emoji_version):
+    base_dir = os.path.dirname(os.path.realpath(__file__))
     file_path = ''
     if data_type == 'ucd':
-        file_path = os.path.join(UCD_DATA_BASEDIR, unicode_version, file_name)
+        file_path = os.path.join(base_dir, UCD_DATA_BASEDIR, unicode_version,
+            file_name)
     elif data_type == 'emoji':
-        file_path = os.path.join(EMOJI_DATA_BASEDIR, emoji_version, file_name)
+        file_path = os.path.join(base_dir, EMOJI_DATA_BASEDIR, emoji_version,
+            file_name)
     f = open(file_path, 'r')
     d = f.read()
     f.close()

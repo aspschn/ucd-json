@@ -1,3 +1,5 @@
 #!/bin/sh
 
-./ucd-json.py "$@"
+BASE_DIR=$(dirname "$0")
+
+$BASE_DIR/ucd-json.py "$@"
