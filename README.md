@@ -107,6 +107,20 @@ Coverage
 | emoji-zwj-sequences.txt                | Not implemented |                   |
 
 
+### Parsers
+
+#### RangeValueParser
+
+```json
+{
+  "0000..007F": "Basic Latin",
+  "0080..00FF": "Latin-1 Supplement",
+  "0100..017F": "Latin Extended-A",
+  "0180..024F": "Latin Extended-B",
+  "0250..02AF": "IPA Extensions"
+}
+```
+
 
 License
 ---------

@@ -113,11 +113,20 @@ if __name__ == '__main__':
         default=EMOJI_VERSION)
     argp.add_argument('-l', '--list', action='store_true',
         help='List all UCD files. Regardless specified version.')
+    argp.add_argument('--version', action='store_true',
+        help='Show version and exit.')
 
     args = argp.parse_args()
 
     # print(args.file)
     # print(args.list)
+
+    # --version
+    if args.version == True:
+        print('ucd-json vdev')
+        print('Unicode Version: ' + args.unicode_version)
+        print('Emoji Version: ' + args.emoji_version)
+        exit(0)
 
     # -l, --list
     if args.list == True:
