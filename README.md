@@ -32,26 +32,26 @@ Coverage
 
 ### UCD files
 
-| File                           | Status          | Parser            |
-| ------------------------------ | --------------- | ----------------- |
+| File                           | Status          | Parser                                 |
+| ------------------------------ | --------------- | -------------------------------------- |
 | ArabicShaping.txt              | Not implemented |                   |
 | BidiBrackets.txt               | Not implemented |                   |
 | BidiCharacterTest.txt          | Not implemented |                   |
 | BidiMirroring.txt              | Not implemented |                   |
 | BidiTest.txt                   | Not implemented |                   |
-| Blocks.txt                     | Done            | RangeValueParser  |
+| Blocks.txt                     | Done            | [RangeValueParser](#rangevalueparser)  |
 | CaseFolding.txt                | Not implemented |                   |
 | CJKRadicals.txt                | Not implemented |                   |
-| CompositionExclusions.txt      | Done            | RangeParser       |
-| DerivedAge.txt                 | Done            | RangeValueParser  |
+| CompositionExclusions.txt      | Done            | [RangeParser](#rangeparser)            |
+| DerivedAge.txt                 | Done            | [RangeValueParser](#rangevalueparser)  |
 | DerivedCoreProperties.txt      | Not implemented |                   |
 | DerivedNormalizationProps.txt  | Done            | NormalizationPropsParser |
-| EastAsianWidth.txt             | Done            | RangeValueParser  |
+| EastAsianWidth.txt             | Done            | [RangeValueParser](#rangevalueparser)  |
 | EmojiSources.txt               | Not implemented |                   |
 | EquivalentUnifiedIdeograph.txt | Not implemented |                   |
-| HangulSyllableType.txt         | Done            | RangeValueParser  |
+| HangulSyllableType.txt         | Done            | [RangeValueParser](#rangevalueparser)  |
 | Index.txt                      | Not implemented |                   |
-| IndicPositionalCategory.txt    | Done            | RangeValueParser  |
+| IndicPositionalCategory.txt    | Done            | [RangeValueParser](#rangevalueparser)  |
 | IndicSyllabicCategory.txt      | Not implemented |                   |
 | Jamo.txt                       | Not implemented |                   |
 | LineBreak.txt                  | Not implemented |                   |
@@ -66,7 +66,7 @@ Coverage
 | PropertyValueAliases.txt       | Done            | GroupedSimpleKeyValueParser |
 | PropList.txt                   | Done            | GroupedRangeParser |
 | ScriptExtensions.txt           | Not implemented |                   |
-| Scripts.txt                    | Done            | RangeValueParser  |
+| Scripts.txt                    | Done            | [RangeValueParser](#rangevalueparser)  |
 | SpecialCasing.txt              | Not implemented |                   |
 | StandardizedVariants.txt       | Not implemented |                   |
 | TangutSources.txt              | Not implemented |                   |
@@ -76,23 +76,23 @@ Coverage
 
 | File                                | Status          | Parser            |
 | ----------------------------------- | --------------- | ----------------- |
-| auxiliary/GraphemeBreakProperty.txt | Done            | RangeValueParser  |
+| auxiliary/GraphemeBreakProperty.txt | Done            | [RangeValueParser](#rangevalueparser)  |
 | auxiliary/GraphemeBreakTest.txt     | Done            | GraphemeBreakTestParser |
 | auxiliary/LineBreakTest.txt         | Not implemented |                   |
 | auxiliary/SentenceBreakProperty.txt | Not implemented |                   |
 | auxiliary/SentenceBreakTest.txt     | Not implemented |                   |
-| auxiliary/WordBreakProperty.txt     | Done            | RangeValueParser  |
+| auxiliary/WordBreakProperty.txt     | Done            | [RangeValueParser](#rangevalueparser)  |
 | auxiliary/WordBreakTest.txt         | Not implemented |                   |
 | extracted/DerivedBidiClass.txt         | Not implemented |                   |
 | extracted/DerivedBinaryProperties.txt  | Not implemented |                   |
-| extracted/DerivedCombiningClass.txt    | Done            | RangeValueParser  |
+| extracted/DerivedCombiningClass.txt    | Done            | [RangeValueParser](#rangevalueparser)  |
 | extracted/DerivedDecompositionType.txt | Not implemented |                   |
 | extracted/DerivedEastAsianWidth.txt    | Not implemented |                   |
-| extracted/DerivedGeneralCategory.txt   | Done            | RangeValueParser  |
+| extracted/DerivedGeneralCategory.txt   | Done            | [RangeValueParser](#rangevalueparser)  |
 | extracted/DerivedJoiningGroup.txt      | Not implemented |                   |
 | extracted/DerivedJoiningType.txt       | Not implemented |                   |
 | extracted/DerivedLineBreak.txt         | Not implemented |                   |
-| extracted/DerivedName.txt              | Done            | RangeValueParser  |
+| extracted/DerivedName.txt              | Done            | [RangeValueParser](#rangevalueparser)  |
 | extracted/DerivedNumericType.txt       | Not implemented |                   |
 | extracted/DerivedNumericValues.txt     | Not implemented |                   |
 
@@ -109,6 +109,17 @@ Coverage
 
 ### Parsers
 
+#### RangeParser
+
+```json
+[
+  "0958",
+  "0959",
+  "095A",
+  "095B"
+]
+```
+
 #### RangeValueParser
 
 ```json
@@ -118,6 +129,19 @@ Coverage
   "0100..017F": "Latin Extended-A",
   "0180..024F": "Latin Extended-B",
   "0250..02AF": "IPA Extensions"
+}
+```
+
+Single key for no range.
+
+```json
+{
+  "0000..001F": "1.1",
+  "0020..007E": "1.1",
+  "007F..009F": "1.1",
+  "00A0..00AC": "1.1",
+  "00AD": "1.1",
+  "00AE..01F5": "1.1"
 }
 ```
 
