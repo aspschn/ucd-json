@@ -57,9 +57,9 @@ def download_data(unicode_version, emoji_version):
     emoji_dir = os.path.join(emoji_data_base_dir, emoji_version)
     os.system('mkdir -p ' + emoji_dir)
 
-    url = EMOJI_URL.format(emoji_version) + 'emoji-data.txt'
-    cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-data.txt')
-    os.system(cmd)
+    # url = EMOJI_URL.format(emoji_version) + 'emoji-data.txt'
+    # cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-data.txt')
+    # os.system(cmd)
 
     url = EMOJI_URL.format(emoji_version) + 'emoji-sequences.txt'
     cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-sequences.txt')
@@ -69,9 +69,9 @@ def download_data(unicode_version, emoji_version):
     cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-test.txt')
     os.system(cmd)
 
-    url = EMOJI_URL.format(emoji_version) + 'emoji-variation-sequences.txt'
-    cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-variation-sequences.txt')
-    os.system(cmd)
+    # url = EMOJI_URL.format(emoji_version) + 'emoji-variation-sequences.txt'
+    # cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-variation-sequences.txt')
+    # os.system(cmd)
 
     url = EMOJI_URL.format(emoji_version) + 'emoji-zwj-sequences.txt'
     cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-zwj-sequences.txt')
