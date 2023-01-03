@@ -4,7 +4,7 @@ ucd-json.py
 
 Author:     Yujŏnja <hardboiled65@gmail.com>
 Created:    2019. 11. 02. 15:30
-Copyright (c) 2019-2022 Yujŏnja. All rights reserved.
+Copyright (c) 2019-2023 Yujŏnja. All rights reserved.
 '''
 import os
 import shutil
