@@ -12,6 +12,7 @@ import argparse
 from argparse import ArgumentParser
 import zipfile
 import json
+import urllib.request
 
 import parsers
 from ucd_files import ucd_files
@@ -46,36 +47,37 @@ def download_data(unicode_version, emoji_version):
     ucd_data_base_dir = os.path.join(base_dir, UCD_DATA_BASEDIR)
     emoji_data_base_dir = os.path.join(base_dir, EMOJI_DATA_BASEDIR)
 
+
     # Download UCD data.
-    os.system('mkdir -p ' + os.path.join(ucd_data_base_dir, unicode_version))
-    cmd = 'wget https://www.unicode.org/Public/{}/ucd/UCD.zip'.format(
-        unicode_version)
-    cmd += ' -O ' + os.path.join(ucd_data_base_dir, unicode_version, 'UCD.zip')
-    os.system(cmd)
+    os.makedirs(os.path.join(ucd_data_base_dir, unicode_version))
+
+    url = UCD_URL.format(unicode_version) + 'UCD.zip'
+    target = os.path.join(ucd_data_base_dir, unicode_version, 'UCD.zip')
+    urllib.request.urlretrieve(url, target)
 
     # Download emoji data.
     emoji_dir = os.path.join(emoji_data_base_dir, emoji_version)
-    os.system('mkdir -p ' + emoji_dir)
+    os.makedirs(emoji_dir)
 
     # url = EMOJI_URL.format(emoji_version) + 'emoji-data.txt'
     # cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-data.txt')
     # os.system(cmd)
 
     url = EMOJI_URL.format(emoji_version) + 'emoji-sequences.txt'
-    cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-sequences.txt')
-    os.system(cmd)
+    target = os.path.join(emoji_dir, 'emoji-sequences.txt')
+    urllib.request.urlretrieve(url, target)
 
     url = EMOJI_URL.format(emoji_version) + 'emoji-test.txt'
-    cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-test.txt')
-    os.system(cmd)
+    target = os.path.join(emoji_dir, 'emoji-test.txt')
+    urllib.request.urlretrieve(url, target)
 
     # url = EMOJI_URL.format(emoji_version) + 'emoji-variation-sequences.txt'
     # cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-variation-sequences.txt')
     # os.system(cmd)
 
     url = EMOJI_URL.format(emoji_version) + 'emoji-zwj-sequences.txt'
-    cmd = 'wget ' + url + ' -O ' + os.path.join(emoji_dir, 'emoji-zwj-sequences.txt')
-    os.system(cmd)
+    target = os.path.join(emoji_dir, 'emoji-zwj-sequences.txt')
+    urllib.request.urlretrieve(url, target)
 
 def unzip_data(unicode_version, emoji_version):
     base_dir = os.path.dirname(os.path.realpath(__file__))
