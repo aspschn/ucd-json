@@ -27,6 +27,11 @@ You can also redirect the output to write result as file.
 $ ./ucd-json PropertyValueAliases.txt > PropertyValueAliases.json
 ```
 
+For @missing convention which is introduced from Unicode 15.0.0,
+```sh
+$ ./ucd-json --missing extracted/DerivedBidiClass.txt > DerivedBidiClass.missing.json
+```
+
 Coverage
 ---------
 
