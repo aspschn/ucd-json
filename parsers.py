@@ -268,3 +268,27 @@ class GraphemeBreakTestParser(BaseParser):
             d[source] = breaks
 
         return d
+
+class MissingParser(BaseParser):
+    '''For @missing Conventions.
+    https://www.unicode.org/reports/tr44/#Missing_Conventions'''
+    def __init__(self):
+        super().__init__()
+
+        self._parse_function = self.parse_function
+
+    @staticmethod
+    def parse_function(data):
+        d = {}
+        lines = data.split('\n')
+        for line in lines:
+            if '@missing:' in line:
+                line = line.replace('# @missing: ', '')
+                split = line.split(';')
+                rng = split[0]
+                value = split[1].strip()
+                d[rng] = value
+            else:
+                continue
+
+        return d

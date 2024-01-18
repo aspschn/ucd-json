@@ -38,7 +38,7 @@ def has_emoji_data(version):
     '''Check if Emoji data has been downloaded.'''
     base_dir = os.path.dirname(os.path.realpath(__file__))
     data_dir = os.path.join(base_dir, EMOJI_DATA_BASEDIR)
-    data_path = os.path.join(data_dir, version, 'emoji-data.txt')
+    data_path = os.path.join(data_dir, version, 'emoji-test.txt')
     return os.path.isfile(data_path)
 
 def download_data(unicode_version, emoji_version):
@@ -115,6 +115,8 @@ if __name__ == '__main__':
         default=EMOJI_VERSION)
     argp.add_argument('-l', '--list', action='store_true',
         help='List all UCD files. Regardless specified version.')
+    argp.add_argument('--missing', action='store_true',
+        help='Extract @missing instead.')
     argp.add_argument('--version', action='store_true',
         help='Show version and exit.')
 
@@ -136,20 +138,28 @@ if __name__ == '__main__':
         exit(0)
 
     # Main
-
     if not (has_data(args.unicode_version) and has_emoji_data(args.emoji_version)):
         download_data(args.unicode_version, args.emoji_version)
         unzip_data(args.unicode_version, args.emoji_version)
+
     if args.file != None:
         ucd_file = ucd_files[args.file]
         data = read_data(ucd_file['type'],
             args.file,
             args.unicode_version,
             args.emoji_version)
-        parser_cls = ucd_files[args.file]['parser']
-        if parser_cls is None:
-            print('Parser for "' + args.file + '" is not implemented.')
-            exit(1)
+        parser_cls = None
+        if args.missing is True:
+            parser_cls = parsers.MissingParser
+            has_missing = ucd_file.get('missing', None)
+            if not has_missing:
+                print(f'The file {args.file} has no @missing fields.')
+                exit(1)
+        else:
+            parser_cls = ucd_files[args.file]['parser']
+            if parser_cls is None:
+                print('Parser for "' + args.file + '" is not implemented.')
+                exit(1)
         parser = parser_cls()
         py_dict = parser.parse(data)
         json_string = json.dumps(py_dict, indent=2)
