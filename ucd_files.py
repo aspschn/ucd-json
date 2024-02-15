@@ -75,7 +75,7 @@ ucd_files = {
         'type': 'ucd',
     },
     'IndicSyllabicCategory.txt': {
-        'parser': None,
+        'parser': parsers.RangeValueParser,
         'type': 'ucd',
     },
     'Jamo.txt': {
