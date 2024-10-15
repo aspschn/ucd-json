@@ -127,7 +127,7 @@ if __name__ == '__main__':
 
     # --version
     if args.version == True:
-        print('ucd-json vdev')
+        print('ucd-json v15.1.0.0')
         print('Unicode Version: ' + args.unicode_version)
         print('Emoji Version: ' + args.emoji_version)
         exit(0)
