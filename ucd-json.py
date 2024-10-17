@@ -17,8 +17,8 @@ import urllib.request
 import parsers
 from ucd_files import ucd_files
 
-UNICODE_VERSION = '15.1.0'
-EMOJI_VERSION = '15.1'
+UNICODE_VERSION = '16.0.0'
+EMOJI_VERSION = '16.0'
 
 UCD_URL = "http://www.unicode.org/Public/{}/ucd/"
 EMOJI_URL = "http://www.unicode.org/Public/emoji/{}/"
@@ -127,7 +127,7 @@ if __name__ == '__main__':
 
     # --version
     if args.version == True:
-        print('ucd-json v15.1.0.0')
+        print('ucd-json v16.0.0.0-dev')
         print('Unicode Version: ' + args.unicode_version)
         print('Emoji Version: ' + args.emoji_version)
         exit(0)
